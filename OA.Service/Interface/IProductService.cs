@@ -13,8 +13,8 @@ namespace OA.Service.Interface
     {
         Task<IEnumerable<ProductDto>> GetAllProductsAsync();
         Task<ProductDto> GetProductByIdAsync(int id);
-        Task CreateProductAsync(ProductDtow product);
-        Task UpdateProductAsync(int id, ProductDtow product);
+        Task CreateProductAsync(ProductDtow product, string ipAddress);
+        Task UpdateProductAsync(int id, ProductDtow product, string ipAddress);
         Task DeleteProductAsync(int id);
     }
 }

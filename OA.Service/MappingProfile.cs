@@ -16,7 +16,7 @@ namespace OA.Service
         {
             #region Writeable
             
-            CreateMap<ProductDtow, Product>();
+            //CreateMap<ProductDtow, Product>();
 
             #endregion
 

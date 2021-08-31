@@ -46,9 +46,7 @@ namespace OA.API.Controllers
             {
                 var ipAddress = await GetIpAddress();
 
-                model.IpAddress ??= ipAddress;
-
-                await _serviceManager.ProductService.CreateProductAsync(model);
+                await _serviceManager.ProductService.CreateProductAsync(model, ipAddress);
                 return Ok();
             }
             catch (Exception e)
@@ -65,9 +63,7 @@ namespace OA.API.Controllers
             {
                 var ipAddress = await GetIpAddress();
 
-                model.IpAddress ??= ipAddress;
-
-                await _serviceManager.ProductService.UpdateProductAsync(id, model);
+                await _serviceManager.ProductService.UpdateProductAsync(id, model, ipAddress);
                 return Ok("Updated");
             }
             catch (Exception e)
